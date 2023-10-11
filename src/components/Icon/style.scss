@@ -1,0 +1,60 @@
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 3608060 */
+    src: url('//at.alicdn.com/t/c/font_3608060_w1mh74axzpm.woff2?t=1690956707870') format('woff2'),
+        url('//at.alicdn.com/t/c/font_3608060_w1mh74axzpm.woff?t=1690956707870') format('woff'),
+        url('//at.alicdn.com/t/c/font_3608060_w1mh74axzpm.ttf?t=1690956707870') format('truetype');
+}
+
+.my-icon {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-plus::before {
+    content: '\e847';
+}
+
+.icon-close::before {
+    content: '\e851';
+}
+
+.icon-refresh::before {
+    content: "\e602";
+}
+
+.icon-search::before {
+    content: '\e605';
+}
+
+.icon-success::before {
+    content: '\e656';
+}
+
+.icon-error::before {
+    content: '\e844';
+}
+
+.icon-info::before {
+    content: '\e6e4';
+}
+
+.icon-loading::before {
+    content: '\e60e';
+    display: inline-block;
+    animation: loadingRotate infinite 2s linear;
+}
+
+@keyframes loadingRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
