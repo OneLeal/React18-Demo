@@ -1,30 +1,26 @@
 import React from "react";
-import TestCom from "./components/test";
-import { Button } from "antd";
-import logo from "./logo.svg";
+import TestButton from "./pages/testButton";
+import TestRadio from "./pages/testRadio";
+import TestDemo from "./pages/testDemo";
+import { Routes, Route, NavLink } from "react-router-dom";
 import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="App-wrap">
+      <div className="App-link-group">
+        <NavLink to="/button">Test Button</NavLink>
+        <NavLink to="/radio">Test Radio</NavLink>
+        <NavLink to="/demo">Demo Todo</NavLink>
+      </div>
 
-        <br />
-        <TestCom></TestCom>
-        <Button type="primary">Antd</Button>
-      </header>
+      <div className="App-link-body">
+        <Routes>
+          <Route path="/button" element={<TestButton />} />
+          <Route path="/radio" element={<TestRadio />} />
+          <Route path="/demo" element={<TestDemo />} />
+        </Routes>
+      </div>
     </div>
   );
 }
