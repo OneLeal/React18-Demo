@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import classNames from "classnames";
 import {
   ButtonProps,
   LoadingConfigType,
@@ -32,6 +33,20 @@ const MyButton: React.FC<ButtonProps> = ({
   underline,
   ...resetProps
 }) => {
+  // 设置样式
+  const cls = classNames(
+    className,
+    "my-btn",
+    `my-btn-${type}`,
+    `my-btn-size-${size}`,
+    `my-btn-shape-${shape}`,
+    {
+      "my-btn-block": block,
+      "my-btn-link-disabled": disabled && type === "link",
+      "my-btn-link-underline": underline && type === "link",
+    }
+  );
+
   // 获取 loading 配置参数
   const loadingOrDelay = useMemo<LoadingConfigType>(
     () => getLoadingConfig(loading),
@@ -77,8 +92,8 @@ const MyButton: React.FC<ButtonProps> = ({
   if (type === "link") {
     return (
       <a
+        className={cls}
         style={resetProps.style}
-        // className={typeClass}
         href={resetProps.href || "#"}
         target={resetProps.target || "_self"}
         onClick={handleClick}
@@ -91,8 +106,8 @@ const MyButton: React.FC<ButtonProps> = ({
   // 返回 Button
   return (
     <button
+      className={cls}
       style={resetProps.style}
-      // className={typeClass}
       disabled={disabled}
       onClick={handleClick}
     >
