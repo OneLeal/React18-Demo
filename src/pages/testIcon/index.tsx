@@ -14,7 +14,7 @@ const TestIcon: React.FC = () => {
     <>
       <h1>Icon 组件</h1>
 
-      <div className="test-page-icon">
+      <div className="test-page test-page-icon">
         <MyIcon icon="icon-refresh" />
         <MyIcon icon="icon-search" className="font-24 color-cyan" />
         <MyIcon icon="icon-plus" className="font-36 color-red" />
