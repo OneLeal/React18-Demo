@@ -13,16 +13,9 @@ function getLoadingConfig(loading: ButtonProps["loading"]): LoadingConfigType {
   if (typeof loading === "object" && loading) {
     const delay = loading?.delay;
     const isDelay = !Number.isNaN(delay) && typeof delay === "number";
-    return {
-      loading: false,
-      delay: isDelay ? delay : 0,
-    };
+    return { loading: false, delay: isDelay ? delay : 0 };
   }
-
-  return {
-    loading: !!loading,
-    delay: 0,
-  };
+  return { loading: !!loading, delay: 0 };
 }
 
 // TODO: finish Icon & className
