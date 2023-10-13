@@ -84,6 +84,10 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
     @include config-size(32px, 4px 15px, 14px, 6px);
 }
 
+.my-btn-size-small {
+    @include config-size(24px, 0 7px, 14px, 4px);
+}
+
 .my-btn-default {
     @include interaction-default(solid);
 }
@@ -162,10 +166,6 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
 
 .my-btn-link-underline {
     text-decoration: underline;
-}
-
-.my-btn-size-small {
-    @include config-size(24px, 0 7px, 14px, 4px);
 }
 
 .my-btn-shape-circle {
