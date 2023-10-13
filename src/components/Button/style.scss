@@ -57,7 +57,7 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
 }
 
 .my-btn {
-    line-height: 1.5;
+    // line-height: 1.5;
     position: relative;
     display: inline-block;
     font-weight: 400;
@@ -74,6 +74,14 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
     border-color: $color-gray;
     background-color: $color-white;
     outline: none;
+}
+
+.my-btn-size-large {
+    @include config-size(40px, 7px 15px, 16px, 8px);
+}
+
+.my-btn-size-middle {
+    @include config-size(32px, 4px 15px, 14px, 6px);
 }
 
 .my-btn-default {
@@ -128,6 +136,7 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
     box-shadow: none;
     text-decoration: none;
     background-color: transparent;
+    box-sizing: border-box;
     height: auto;
 
     &:hover {
@@ -155,20 +164,26 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
     text-decoration: underline;
 }
 
-.my-btn-size-large {
-    @include config-size(40px, 7px 15px, 16px, 8px);
-}
-
-.my-btn-size-middle {
-    @include config-size(32px, 4px 15px, 14px, 6px);
-}
-
 .my-btn-size-small {
     @include config-size(24px, 0 7px, 14px, 4px);
 }
 
 .my-btn-shape-circle {
     border-radius: 50%;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+
+    &.my-btn-size-large {
+        min-width: 40px;
+    }
+
+    &.my-btn-size-middle {
+        min-width: 32px;
+    }
+
+    &.my-btn-size-small {
+        min-width: 24px;
+    }
 }
 
 .my-btn-shape-round {

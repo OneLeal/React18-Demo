@@ -1,0 +1,40 @@
+.btn-group-wrap {
+    p {
+        margin: 0;
+        padding: 0;
+        font-weight: bolder;
+    }
+
+    .btn-group-content {
+        margin-top: 20px;
+
+        .my-btn {
+            margin-right: 10px;
+        }
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 35px;
+    }
+
+    .btn-group-size {
+        display: flex;
+        align-items: self-end;
+    }
+
+    .btn-group-block {
+        display: flex;
+
+        .my-btn-block {
+            margin-bottom: 10px;
+        }
+
+        .btn-group-content {
+            width: 200px;
+        }
+
+        .btn-group-content:not(:last-of-type) {
+            margin-right: 30px;
+        }
+    }
+}
