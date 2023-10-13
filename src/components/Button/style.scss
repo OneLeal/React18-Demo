@@ -1,1 +1,195 @@
-.my-btn {}
+@import '../../styles/common.scss';
+$color-white: #fff;
+$color-gray: #d9d9d9;
+$btn-text-color: rgba(0, 0, 0, 0.85);
+
+@mixin config-shadow {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+@mixin config-size($height, $padding, $font, $radius) {
+    height: $height;
+    padding: $padding;
+    font-size: $font;
+    border-radius: $radius;
+}
+
+@mixin config-color($color, $borderColor, $backgroundColor) {
+    color: $color;
+    border-color: $borderColor;
+    background-color: $backgroundColor;
+}
+
+@mixin interaction-default($style) {
+    border-style: $style;
+
+    &:not(:disabled):hover {
+        @include config-color($info-description, $border-hover, $fill-hover);
+    }
+
+    &:not(:disabled):active {
+        @include config-color($btn-text-color, $border-click, $fill-click);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        @include config-color($info-gray, $border-disabled, $fill-disabled);
+    }
+}
+
+@mixin interaction-theme($default, $hover, $active, $disabled) {
+    @include config-shadow;
+    @include config-color($color-white, $default, $default);
+
+    &:not(:disabled):hover {
+        @include config-color($color-white, $hover, $hover);
+    }
+
+    &:not(:disabled):active {
+        @include config-color($color-white, $active, $active);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        @include config-color($color-white, $disabled, $disabled);
+    }
+}
+
+.my-btn {
+    // line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    user-select: none;
+    touch-action: manipulation;
+    color: $btn-text-color;
+    border-color: $color-gray;
+    background-color: $color-white;
+    outline: none;
+}
+
+.my-btn-size-large {
+    @include config-size(40px, 7px 15px, 16px, 8px);
+}
+
+.my-btn-size-middle {
+    @include config-size(32px, 4px 15px, 14px, 6px);
+}
+
+.my-btn-size-small {
+    @include config-size(24px, 0 7px, 14px, 4px);
+}
+
+.my-btn-default {
+    @include interaction-default(solid);
+}
+
+.my-btn-dashed {
+    @include interaction-default(dashed);
+}
+
+.my-btn-primary {
+    @include interaction-theme($primary-default, $primary-hover, $primary-click, $primary-disabled);
+}
+
+.my-btn-success {
+    @include interaction-theme($success-default, $success-hover, $success-click, $success-disabled);
+}
+
+.my-btn-info {
+    @include interaction-theme($info-default, $info-hover, $info-click, $info-disabled);
+}
+
+.my-btn-warning {
+    @include interaction-theme($warning-default, $warning-hover, $warning-click, $warning-disabled);
+}
+
+.my-btn-error {
+    @include interaction-theme($error-default, $error-hover, $error-click, $error-disabled);
+}
+
+.my-btn-text {
+    box-shadow: none;
+    @include config-color($btn-text-color, transparent, transparent);
+
+    &:not(:disabled):hover {
+        @include config-color($info-description, $fill-hover, $fill-hover);
+    }
+
+    &:not(:disabled):active {
+        @include config-color($btn-text-color, $fill-click, $fill-click);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        @include config-color($info-gray, transparent, transparent);
+    }
+}
+
+.my-btn-link {
+    color: $link-default;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    height: auto;
+
+    &:hover {
+        color: $link-hover;
+        background-color: transparent;
+    }
+
+    &:active {
+        color: $link-click;
+        background-color: transparent;
+    }
+}
+
+.my-btn-link-disabled {
+    cursor: not-allowed;
+    color: $link-disabled;
+
+    &:hover,
+    &:active {
+        color: $link-disabled;
+    }
+}
+
+.my-btn-link-underline {
+    text-decoration: underline;
+}
+
+.my-btn-shape-circle {
+    border-radius: 50%;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+
+    &.my-btn-size-large {
+        min-width: 40px;
+    }
+
+    &.my-btn-size-middle {
+        min-width: 32px;
+    }
+
+    &.my-btn-size-small {
+        min-width: 24px;
+    }
+}
+
+.my-btn-shape-round {
+    border-radius: 27px;
+}
+
+.my-btn-block {
+    width: 100%;
+}
