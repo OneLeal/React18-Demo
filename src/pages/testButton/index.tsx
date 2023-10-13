@@ -108,14 +108,14 @@ const TestButton = () => {
               Disabled
             </MyButton>
 
-            <MyButton type="link" href="https://juejin.cn/" target="_blank">
+            <MyButton type="link" href="https://juejin.cn/" target="_self">
               JueJin
             </MyButton>
             <MyButton
               disabled
               type="link"
               href="https://juejin.cn/"
-              target="_blank"
+              target="_self"
             >
               JueJin
             </MyButton>

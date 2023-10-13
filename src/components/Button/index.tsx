@@ -95,7 +95,7 @@ const MyButton: React.FC<ButtonProps> = ({
         className={cls}
         style={resetProps.style}
         href={resetProps.href || "#"}
-        target={resetProps.target || "_self"}
+        target={resetProps.target || "_blank"}
         onClick={handleClick}
       >
         {children}
