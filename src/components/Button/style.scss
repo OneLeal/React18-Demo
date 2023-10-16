@@ -13,6 +13,10 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
     padding: $padding;
     font-size: $font;
     border-radius: $radius;
+
+    .my-icon {
+        font-size: $font;
+    }
 }
 
 @mixin config-color($color, $borderColor, $backgroundColor) {
@@ -192,4 +196,10 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
 
 .my-btn-block {
     width: 100%;
+}
+
+.my-btn-span {
+    span {
+        margin-left: 4px;
+    }
 }

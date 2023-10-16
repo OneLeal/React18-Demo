@@ -24,13 +24,27 @@
 
     .btn-group-block {
         display: flex;
-
+        
         .my-btn-block {
             margin-bottom: 10px;
         }
 
         .btn-group-content {
             width: 200px;
+        }
+
+        .btn-group-content:not(:last-of-type) {
+            margin-right: 30px;
+        }
+    }
+
+    .btn-group-icon {
+        display: flex;
+
+        .btn-group-content {
+            width: 300px;
+            display: flex;
+            align-items: flex-end;
         }
 
         .btn-group-content:not(:last-of-type) {

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import MyIcon from "../Icon";
 import classNames from "classnames";
 import {
   ButtonProps,
@@ -19,7 +20,6 @@ function getLoadingConfig(loading: ButtonProps["loading"]): LoadingConfigType {
   return { loading: !!loading, delay: 0 };
 }
 
-// TODO: finish Icon & className
 const MyButton: React.FC<ButtonProps> = ({
   size = "middle",
   type = "default",
@@ -41,6 +41,7 @@ const MyButton: React.FC<ButtonProps> = ({
     `my-btn-size-${size}`,
     `my-btn-shape-${shape}`,
     {
+      "my-btn-span": !!icon,
       "my-btn-block": block,
       "my-btn-link-disabled": disabled && type === "link",
       "my-btn-link-underline": underline && type === "link",
@@ -98,7 +99,8 @@ const MyButton: React.FC<ButtonProps> = ({
         target={resetProps.target || "_blank"}
         onClick={handleClick}
       >
-        {children}
+        {icon && <MyIcon icon={icon} />}
+        {children && <span>{children}</span>}
       </a>
     );
   }
@@ -111,7 +113,8 @@ const MyButton: React.FC<ButtonProps> = ({
       disabled={disabled}
       onClick={handleClick}
     >
-      {children}
+      {icon && <MyIcon icon={icon} />}
+      {children && <span>{children}</span>}
     </button>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import MyButton from "../../components/Button";
+import { Button } from "antd";
 import "./style.scss";
 
 // 基础组件 Button 测试页面
@@ -181,9 +182,159 @@ const TestButton = () => {
           </div>
         </div>
 
-        {/* TODO: Icon & Loading 效果 */}
-        <div className="btn-group-wrap"></div>
+        <div className="btn-group-wrap">
+          <p>Icon 按钮</p>
 
+          <div className="btn-group-icon">
+            <div className="btn-group-content">
+              <MyButton
+                size="small"
+                icon="icon-search"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              >
+                Search
+              </MyButton>
+
+              <MyButton
+                type="dashed"
+                icon="icon-plus"
+                onClick={() => {
+                  console.log("plus...");
+                }}
+              >
+                Plus
+              </MyButton>
+
+              <MyButton
+                size="large"
+                type="primary"
+                icon="icon-refresh"
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              >
+                Refresh
+              </MyButton>
+            </div>
+
+            <div className="btn-group-content">
+              <MyButton
+                size="small"
+                icon="icon-search"
+                shape="round"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              >
+                Search
+              </MyButton>
+
+              <MyButton
+                type="dashed"
+                shape="round"
+                icon="icon-plus"
+                onClick={() => {
+                  console.log("plus...");
+                }}
+              >
+                Plus
+              </MyButton>
+
+              <MyButton
+                size="large"
+                type="primary"
+                shape="round"
+                icon="icon-refresh"
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              >
+                Refresh
+              </MyButton>
+            </div>
+
+            <div className="btn-group-content">
+              <MyButton
+                size="small"
+                icon="icon-search"
+                shape="circle"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              />
+
+              <MyButton
+                type="dashed"
+                shape="circle"
+                icon="icon-plus"
+                onClick={() => {
+                  console.log("plus...");
+                }}
+              />
+
+              <MyButton
+                size="large"
+                type="primary"
+                shape="circle"
+                icon="icon-refresh"
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              />
+            </div>
+          </div>
+
+          <div className="btn-group-icon">
+            <div className="btn-group-content">
+              <MyButton
+                type="text"
+                size="small"
+                icon="icon-search"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              >
+                Search
+              </MyButton>
+
+              <MyButton
+                type="text"
+                size="middle"
+                icon="icon-plus"
+                onClick={() => {
+                  console.log("plus...");
+                }}
+              >
+                Plus
+              </MyButton>
+
+              <MyButton
+                type="text"
+                size="large"
+                icon="icon-refresh"
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              >
+                Refresh
+              </MyButton>
+            </div>
+
+            <div className="btn-group-content">
+              <MyButton
+                type="link"
+                icon="icon-search"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              >
+                Search
+              </MyButton>
+            </div>
+          </div>
+        </div>
         {/* TODO: Custom Style */}
         <div className="btn-group-wrap"></div>
       </div>
