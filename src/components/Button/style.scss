@@ -100,6 +100,10 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
     @include interaction-default(dashed);
 }
 
+.my-btn-brand {
+    @include interaction-theme($brand-default, $brand-hover, $brand-click, $brand-disabled);
+}
+
 .my-btn-primary {
     @include interaction-theme($primary-default, $primary-hover, $primary-click, $primary-disabled);
 }

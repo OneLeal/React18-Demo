@@ -18,6 +18,7 @@ const TestButton = () => {
           <p>Base Usage</p>
 
           <div className="btn-group-content">
+            <MyButton type="brand">Brand</MyButton>
             <MyButton type="primary">Primary</MyButton>
             <MyButton type="success">Success</MyButton>
             <MyButton type="info">Info</MyButton>
@@ -28,6 +29,9 @@ const TestButton = () => {
           </div>
 
           <div className="btn-group-content">
+            <MyButton disabled type="brand">
+              Brand
+            </MyButton>
             <MyButton disabled type="primary">
               Primary
             </MyButton>
@@ -133,6 +137,9 @@ const TestButton = () => {
           <div className="btn-group-block">
             <div className="btn-group-content">
               <MyButton type="primary" block>
+                Primary Block
+              </MyButton>
+              <MyButton type="primary" disabled block>
                 Primary Block
               </MyButton>
               <MyButton block>Default Block</MyButton>

@@ -3,6 +3,7 @@ import React from "react";
 type ButtonShapeType = "default" | "circle" | "round";
 type ButtonSizeType = "small" | "middle" | "large";
 type ButtonType =
+  | "brand"
   | "default"
   | "primary"
   | "success"
