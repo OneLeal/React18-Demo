@@ -109,7 +109,7 @@ const TestButton = () => {
               Disabled
             </MyButton>
 
-            <MyButton type="link" href="https://juejin.cn/" target="_self">
+            <MyButton type="link" href="https://juejin.cn/">
               JueJin
             </MyButton>
             <MyButton
@@ -119,18 +119,6 @@ const TestButton = () => {
               target="_self"
             >
               JueJin
-            </MyButton>
-
-            <MyButton type="link" href="https://www.bilibili.com/" underline>
-              Bilibili
-            </MyButton>
-            <MyButton
-              disabled
-              type="link"
-              href="https://www.bilibili.com/"
-              underline
-            >
-              Bilibili
             </MyButton>
           </div>
         </div>
@@ -289,6 +277,16 @@ const TestButton = () => {
           <div className="btn-group-icon">
             <div className="btn-group-content">
               <MyButton
+                type="link"
+                icon="icon-search"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              >
+                Search
+              </MyButton>
+
+              <MyButton
                 type="text"
                 size="small"
                 icon="icon-search"
@@ -321,20 +319,9 @@ const TestButton = () => {
                 Refresh
               </MyButton>
             </div>
-
-            <div className="btn-group-content">
-              <MyButton
-                type="link"
-                icon="icon-search"
-                onClick={() => {
-                  console.log("search...");
-                }}
-              >
-                Search
-              </MyButton>
-            </div>
           </div>
         </div>
+
         {/* TODO: Custom Style */}
         <div className="btn-group-wrap"></div>
       </div>

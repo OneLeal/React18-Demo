@@ -30,7 +30,6 @@ const MyButton: React.FC<ButtonProps> = ({
   icon,
   disabled,
   loading,
-  underline,
   ...resetProps
 }) => {
   // 设置样式
@@ -44,7 +43,6 @@ const MyButton: React.FC<ButtonProps> = ({
       "my-btn-span": !!icon,
       "my-btn-block": block,
       "my-btn-link-disabled": disabled && type === "link",
-      "my-btn-link-underline": underline && type === "link",
     }
   );
 

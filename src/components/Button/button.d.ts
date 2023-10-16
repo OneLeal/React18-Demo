@@ -37,7 +37,6 @@ export interface ButtonProps extends MergedHTMLAttributes {
   children?: React.ReactNode;
   disabled?: boolean;
   block?: boolean;
-  underline?: boolean;
   loading?: boolean | { delay?: number };
   icon?: string;
   prefixCls?: string;
