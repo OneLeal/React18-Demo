@@ -143,30 +143,6 @@ const TestButton = () => {
                 Link Block
               </MyButton>
             </div>
-
-            <div className="btn-group-content">
-              <MyButton type="primary" shape="round" size="large" block>
-                Large Block
-              </MyButton>
-              <MyButton
-                type="primary"
-                shape="round"
-                size="large"
-                block
-                disabled
-              >
-                Large Block
-              </MyButton>
-              <MyButton type="dashed" shape="round" block>
-                Middle Block
-              </MyButton>
-              <MyButton shape="round" block>
-                Middle Block
-              </MyButton>
-              <MyButton type="text" shape="round" size="small" block>
-                Small Block
-              </MyButton>
-            </div>
           </div>
         </div>
 
@@ -205,8 +181,22 @@ const TestButton = () => {
               >
                 Refresh
               </MyButton>
-            </div>
 
+              <MyButton
+                size="large"
+                type="primary"
+                icon="icon-refresh"
+                disabled
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              >
+                Refresh
+              </MyButton>
+            </div>
+          </div>
+
+          <div className="btn-group-icon">
             <div className="btn-group-content">
               <MyButton
                 size="small"
@@ -241,8 +231,23 @@ const TestButton = () => {
               >
                 Refresh
               </MyButton>
-            </div>
 
+              <MyButton
+                size="large"
+                type="primary"
+                shape="round"
+                disabled
+                icon="icon-refresh"
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              >
+                Refresh
+              </MyButton>
+            </div>
+          </div>
+
+          <div className="btn-group-icon">
             <div className="btn-group-content">
               <MyButton
                 size="small"
@@ -266,6 +271,17 @@ const TestButton = () => {
                 size="large"
                 type="primary"
                 shape="circle"
+                icon="icon-refresh"
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              />
+
+              <MyButton
+                size="large"
+                type="primary"
+                shape="circle"
+                disabled
                 icon="icon-refresh"
                 onClick={() => {
                   console.log("refresh...");
