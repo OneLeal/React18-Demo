@@ -43,6 +43,18 @@
     content: '\e6e4';
 }
 
+.icon-lock::before {
+    content: '\e85e';
+}
+
+.icon-unlock::before {
+    content: '\e85f';
+}
+
+.icon-view::before {
+    content: '\e860';
+}
+
 .icon-loading::before {
     content: '\e60e';
     display: inline-block;

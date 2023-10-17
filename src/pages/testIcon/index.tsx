@@ -12,7 +12,7 @@ const styleMap = {
 const TestIcon: React.FC = () => {
   return (
     <>
-      <h1>Icon 组件</h1>
+      <h1>Test Icon Component</h1>
 
       <div className="test-page test-page-icon">
         <MyIcon icon="icon-refresh" />

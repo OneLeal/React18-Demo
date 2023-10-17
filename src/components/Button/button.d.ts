@@ -3,6 +3,7 @@ import React from "react";
 type ButtonShapeType = "default" | "circle" | "round";
 type ButtonSizeType = "small" | "middle" | "large";
 type ButtonType =
+  | "brand"
   | "default"
   | "primary"
   | "success"
@@ -37,11 +38,10 @@ export interface ButtonProps extends MergedHTMLAttributes {
   children?: React.ReactNode;
   disabled?: boolean;
   block?: boolean;
-  underline?: boolean;
   loading?: boolean | { delay?: number };
   icon?: string;
   prefixCls?: string;
   className?: string;
   rootClassName?: string;
-  // [key: `data-${string}`]: string; // FIXME: consider to use in the future
+  [key: `data-${string}`]: string;
 }

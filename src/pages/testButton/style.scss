@@ -37,4 +37,45 @@
             margin-right: 30px;
         }
     }
+
+    .btn-group-icon {
+        display: flex;
+
+        .btn-group-content {
+            width: 400px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .btn-group-content:not(:last-of-type) {
+            margin-right: 30px;
+        }
+    }
+
+    .btn-group-loading,
+    .btn-group-custom {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .btn-other-theme {
+        border-radius: 18px;
+        border-color: #08979c;
+        background-color: #08979c;
+
+        &:hover {
+            border-color: #13c2c2;
+            background-color: #13c2c2;
+        }
+
+        &:active {
+            border-color: #006d75;
+            background-color: #006d75;
+        }
+
+        &:disabled {
+            border-color: #5cdbd3;
+            background-color: #5cdbd3;
+        }
+    }
 }
