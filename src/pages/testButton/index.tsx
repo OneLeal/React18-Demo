@@ -95,7 +95,7 @@ const TestButton = () => {
               E
             </MyButton>
             <MyButton type="primary" size="large" shape="circle" disabled>
-              E
+              SHE
             </MyButton>
           </div>
         </div>
@@ -259,6 +259,45 @@ const TestButton = () => {
 
           <div className="btn-group-icon">
             <div className="btn-group-content">
+              <MyButton
+                size="small"
+                icon="icon-search"
+                shape="default"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              />
+
+              <MyButton
+                type="dashed"
+                shape="default"
+                icon="icon-plus"
+                onClick={() => {
+                  console.log("plus...");
+                }}
+              />
+
+              <MyButton
+                size="large"
+                type="primary"
+                shape="default"
+                icon="icon-refresh"
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              />
+
+              <MyButton
+                size="large"
+                type="primary"
+                shape="default"
+                disabled
+                icon="icon-refresh"
+                onClick={() => {
+                  console.log("refresh...");
+                }}
+              />
+
               <MyButton
                 size="small"
                 icon="icon-search"

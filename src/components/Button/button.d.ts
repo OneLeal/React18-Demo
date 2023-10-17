@@ -43,5 +43,5 @@ export interface ButtonProps extends MergedHTMLAttributes {
   prefixCls?: string;
   className?: string;
   rootClassName?: string;
-  // [key: `data-${string}`]: string; // FIXME: consider to use in the future
+  [key: `data-${string}`]: string;
 }

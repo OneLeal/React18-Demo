@@ -8,6 +8,23 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
 
+@mixin config-size-when-icon {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+
+    &.my-btn-size-large {
+        min-width: 40px;
+    }
+
+    &.my-btn-size-middle {
+        min-width: 32px;
+    }
+
+    &.my-btn-size-small {
+        min-width: 24px;
+    }
+}
+
 @mixin config-size($height, $padding, $font, $radius) {
     height: $height;
     padding: $padding;
@@ -61,7 +78,7 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
 }
 
 .my-btn {
-    // line-height: 1.5;
+    line-height: 1.2;
     position: relative;
     display: inline-block;
     font-weight: 400;
@@ -174,24 +191,21 @@ $btn-text-color: rgba(0, 0, 0, 0.85);
 
 .my-btn-shape-circle {
     border-radius: 50%;
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-
-    &.my-btn-size-large {
-        min-width: 40px;
-    }
-
-    &.my-btn-size-middle {
-        min-width: 32px;
-    }
-
-    &.my-btn-size-small {
-        min-width: 24px;
-    }
+    @include config-size-when-icon;
 }
 
 .my-btn-shape-round {
     border-radius: 27px;
+}
+
+.my-btn-only-icon {
+    &.my-btn-shape-round {
+        @include config-size-when-icon;
+    }
+
+    &.my-btn-shape-default {
+        @include config-size-when-icon;
+    }
 }
 
 .my-btn-block {

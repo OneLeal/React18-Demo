@@ -50,6 +50,7 @@ const MyButton: React.FC<ButtonProps> = ({
     `my-btn-shape-${shape}`,
     {
       "my-btn-span": !!icon || innerLoading,
+      "my-btn-only-icon": (!!icon || innerLoading) && !children,
       "my-btn-block": block,
       "my-btn-link-disabled": type === "link" && (disabled || innerLoading),
     }
