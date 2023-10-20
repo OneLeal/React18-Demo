@@ -24,7 +24,7 @@ const MyButton: React.FC<ButtonProps> = ({
   size = "middle",
   type = "default",
   shape = "default",
-  className = "",
+  className,
   children,
   block,
   icon,

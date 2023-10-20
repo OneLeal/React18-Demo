@@ -270,10 +270,44 @@ const TestButton = () => {
 
               <MyButton
                 type="dashed"
+                size="small"
+                icon="icon-search"
+                shape="default"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              />
+
+              <MyButton
+                type="dashed"
                 shape="default"
                 icon="icon-plus"
                 onClick={() => {
                   console.log("plus...");
+                }}
+              />
+
+              <MyButton
+                icon="icon-plus"
+                onClick={() => {
+                  console.log("plus...");
+                }}
+              />
+
+              <MyButton
+                size="large"
+                icon="icon-view"
+                onClick={() => {
+                  console.log("view...");
+                }}
+              />
+
+              <MyButton
+                size="large"
+                disabled
+                icon="icon-view"
+                onClick={() => {
+                  console.log("view...");
                 }}
               />
 
@@ -309,10 +343,47 @@ const TestButton = () => {
 
               <MyButton
                 type="dashed"
+                size="small"
+                icon="icon-search"
+                shape="circle"
+                onClick={() => {
+                  console.log("search...");
+                }}
+              />
+
+              <MyButton
+                type="dashed"
                 shape="circle"
                 icon="icon-plus"
                 onClick={() => {
                   console.log("plus...");
+                }}
+              />
+
+              <MyButton
+                shape="circle"
+                icon="icon-plus"
+                onClick={() => {
+                  console.log("plus...");
+                }}
+              />
+
+              <MyButton
+                size="large"
+                shape="circle"
+                icon="icon-view"
+                onClick={() => {
+                  console.log("view...");
+                }}
+              />
+
+              <MyButton
+                disabled
+                size="large"
+                shape="circle"
+                icon="icon-view"
+                onClick={() => {
+                  console.log("view...");
                 }}
               />
 
