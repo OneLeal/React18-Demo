@@ -1,0 +1,29 @@
+.cm-divide-gutter {
+    width: 3px;
+}
+
+.cm-divide-gutter-blue {
+    background-color: #4486FF;
+}
+
+.cm-divide-gutter-yellow {
+    background-color: #FF0;
+}
+
+.cm-divide-gutter-red {
+    background-color: #EB5046;
+}
+
+.cm-activeLineGutter {
+    &.cm-divide-gutter-blue {
+        background-color: #4486FF;
+    }
+
+    &.cm-divide-gutter-yellow {
+        background-color: #FF0;
+    }
+
+    &.cm-divide-gutter-red {
+        background-color: #EB5046;
+    }
+}
